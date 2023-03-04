@@ -17,6 +17,10 @@
   margin: 0;
 }
 
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -79,11 +83,79 @@ button {
   font-size: 2rem;
 }
 
+/* ============HEADER STYLES START======= */
 .navBar a {
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
 }
+
+header {
+  padding: 1em;
+  /* background: var(--pryGrad); */
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  z-index: 1;
+}
+
+header .navBar a:hover {
+  /* padding: 1em; */
+  /* width: 100%; */
+  border-bottom: solid 2px #f36d20;
+  /* background: var(--pryGrad); */
+}
+
+@media screen and (max-width: 900px) {
+  header div .bi-list {
+    display: initial;
+  }
+
+  header .navBar {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0.469199px -0.469199px 0.469199px rgba(214, 214, 214, 0.4),
+      inset -0.469199px 0.469199px 0.469199px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4.62161px);
+    top: -960px;
+    left: 0;
+    right: 0;
+    padding: 1em 2em;
+    width: 100%;
+    height: fit-content;
+    z-index: 200;
+    transition: all 0.3s ease-in;
+    text-align: center;
+  }
+
+  header .navBar .navItem {
+    height: 40vh;
+    margin-bottom: 20px;
+  }
+  header .navBar.active {
+    top: 100px;
+    /* height: 50vh; */
+    transition: all 0.3s ease-out;
+  }
+
+  header .navBar a:hover {
+    padding: 0.5em;
+    width: 100%;
+    background: var(--pryGrad);
+  }
+
+  /* header .navBar a {
+    display: block;
+    text-transform: uppercase;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: rgb(1, 1, 39);
+  } */
+}
+
+/* ============HEADER STYLES ENDS======= */
 
 /* hero section */
 
@@ -122,6 +194,9 @@ h2 {
 }
 
 @media screen and (max-width: 900px) {
+  .hero {
+    height: 50vh;
+  }
   .hero > section {
     width: 90%;
     height: 50%;
@@ -151,7 +226,7 @@ h2 {
 }
 
 .about {
-  margin: 15em auto;
+  margin: 7em auto;
 }
 
 .shopping {
@@ -178,8 +253,39 @@ h2 {
 
 .icons {
   margin-right: -2em;
-  -webkit-animation: moveUp 1s ease-in-out infinite alternate;
+  -webkit-animation: stretchIcon 1s ease-in-out infinite alternate;
   animation: stretchIcon 1s ease-in-out infinite alternate;
+}
+
+.icons:nth-child(1) {
+  /* margin-right: -1.8em; */
+  -webkit-animation: stretchIcon ease-in-out 1s infinite alternate;
+  animation: stretchIcon ease-in-out 1s infinite alternate;
+}
+.icons:nth-child(2) {
+  /* margin-right: -1.8em; */
+  -webkit-animation: stretchIcon ease-in-out 1.5s infinite alternate;
+  animation: stretchIcon ease-in-out 1.5s infinite alternate;
+}
+.icons:nth-child(3) {
+  /* margin-right: -1.6em; */
+  -webkit-animation: stretchIcon ease-in-out 1.4s infinite alternate;
+  animation: stretchIcon ease-in-out 1.4s infinite alternate;
+}
+.icons:nth-child(4) {
+  /* margin-right: -1.5em; */
+  -webkit-animation: stretchIcon ease-in-out 1.4s infinite alternate;
+  animation: stretchIcon ease-in-out 1.4s infinite alternate;
+}
+.icons:nth-child(5) {
+  /* margin-right: -1.4em; */
+  -webkit-animation: stretchIcon ease-in-out 1.4s infinite alternate;
+  animation: stretchIcon ease-in-out 1.4s infinite alternate;
+}
+.icons:nth-child(6) {
+  /* margin-right: -1.3em; */
+  -webkit-animation: stretchIcon 1.1s ease-in-out infinite alternate;
+  animation: stretchIcon 1.1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes stretchIcon {
@@ -189,7 +295,7 @@ h2 {
   }
   100% {
     transform: translateX(-50px);
-    margin-right: -1em;
+    /* margin-right: -1em; */
   }
 }
 @keyframes stretchIcon {
@@ -201,7 +307,7 @@ h2 {
   100% {
     transform: translateX(-50px);
 
-    margin-right: -1em;
+    /* margin-right: -1em; */
   }
 }
 
@@ -214,8 +320,90 @@ h2 {
   backdrop-filter: blur(4.62161px);
   padding: 2em;
   border-radius: 5.27848px;
+
+  margin-bottom: 1em;
 }
 
 .Do a {
   color: #2f80ed;
+}
+
+/* footer */
+footer {
+  margin-top: 10em;
+  padding: 38px 88px;
+  background-color: #000;
+}
+
+footer .Btn-outline {
+  border-radius: 12px;
+}
+
+.logo .community-container {
+  width: 50%;
+  margin-top: 100px;
+}
+.logo .community-container h4 {
+  margin-bottom: 25px;
+}
+.logo .community-container .icon {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.logo h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.logo p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 9px;
+}
+
+aside {
+  margin: 2px auto;
+}
+
+footer aside h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 55px;
+}
+footer aside a {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer aside span {
+  font-size: 7px;
+  padding: 5px 10px;
+}
+
+footer article {
+  border-top: 1px solid rgb(233, 233, 233);
+  margin-top: 62px;
+  padding-top: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  footer aside h4 {
+    margin-top: 2em;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer aside {
+    text-align: center;
+  }
+  footer aside a {
+    font-size: 10px;
+  }
+
+  footer small {
+    font-size: 8px;
+  }
 }
