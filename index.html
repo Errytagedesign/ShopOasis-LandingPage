@@ -37,6 +37,8 @@
 
     <title>Shop Oasis | Where E-commerce meets defi innovations.</title>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
   </head>
   <body>
@@ -96,19 +98,19 @@
         <h2 class="welcome">Welcome to <mark> Shop.Oasis</mark></h2>
         <p class="intro">Where E-commerce meets defi innovations.</p>
         <article class="d-flex flex-wra col-10 col-md-8">
-          <a class="p-1 p-md-2 social">
+          <a data-aos="zoom-in" class="p-1 p-md-2 social">
             <img class="col-12" src="assets/images/teelgram.png" />
           </a>
-          <a class="p-1 p-md-2 social">
+          <a data-aos="zoom-in" class="p-1 p-md-2 social">
             <img class="col-12" src="assets/images/youtube.png" />
           </a>
-          <a class="p-1 p-md-2 social">
+          <a data-aos="zoom-in" class="p-1 p-md-2 social">
             <img class="col-12" src="assets/images/discord.png" />
           </a>
-          <a class="p-1 p-md-2 social">
+          <a data-aos="zoom-in" class="p-1 p-md-2 social">
             <img class="col-12" src="assets/images/twitter.png" />
           </a>
-          <a class="p-1 p-md-2 social">
+          <a data-aos="zoom-in" class="p-1 p-md-2 social">
             <img class="col-12" src="assets/images/facebook.png" />
           </a>
         </article>
@@ -118,12 +120,12 @@
     <!-- About Start -->
 
     <section
-      class="about d-flex flex-column flex-lg-row container justify-content-between"
+      class="container about d-flex flex-column flex-lg-row container justify-content-between"
     >
-      <article class="col-12 col-lg-6">
+      <article class="col-12 col-lg-6 text-center text-lg-start">
         <div class="mt-5">
-          <h3>At <mark> Shop.Oasis</mark></h3>
-          <p class="mt-5">
+          <h2 data-aos="fade-right">At <mark> Shop.Oasis</mark></h2>
+          <p data-aos="fade-left" class="mt-5">
             We believe that shopping should be more than just a transaction.
             <br />
             <br />
@@ -137,14 +139,18 @@
             technology to the e-commerce space.
           </p>
         </div>
-        <div class="mt-5 d-flex flex-row">
-          <button class="main-btn">Join our waitlist</button>
-          <button class="Btn-outline d-flex flex-row align-items-center ms-5">
+        <div data-aos="fade-right" class="mt-5 d-flex flex-column flex-md-row">
+          <button id="join" class="main-btn">Join our waitlist</button>
+          <button
+            data-aos="fade-left"
+            class="Btn-outline d-flex flex-row align-items-center justify-content-between ms-0 ms-md-5 mt-3 mt-md-0"
+          >
             Learn more <a class="ms-2"> <i class="bi bi-play-btn-fill"></i></a>
           </button>
         </div>
       </article>
       <aside
+        data-aos="zoom-in"
         class="col-12 col-lg-5 d-flex flex-column align-items-center justify-content-center p-1 p-md-5"
       >
         <div>
@@ -184,25 +190,37 @@
       <section
         class="d-flex flex-wrap justify-content-between align-items-center col-12"
       >
-        <article class="Do col-12 col-md-5 mx-auto text-center">
+        <article
+          data-aos="fade-right"
+          class="Do col-12 col-md-5 mx-auto text-center"
+        >
           <p>Join our community on Discord</p>
           <a href="https://t.me/shop.oasis" target="_blank">
             https://t.me/shop.oasis</a
           >
         </article>
-        <article class="Do col-12 col-md-5 mx-auto text-center">
+        <article
+          data-aos="fade-left"
+          class="Do col-12 col-md-5 mx-auto text-center"
+        >
           <p>Join our community on Discord</p>
           <a href="https://t.me/shop.oasis" target="_blank">
             https://t.me/shop.oasis</a
           >
         </article>
-        <article class="Do col-12 col-md-5 mx-auto text-center">
+        <article
+          data-aos="fade-right"
+          class="Do col-12 col-md-5 mx-auto text-center"
+        >
           <p>Join our community on Discord</p>
           <a href="https://t.me/shop.oasis" target="_blank">
             https://t.me/shop.oasis</a
           >
         </article>
-        <article class="Do col-12 col-md-5 mx-auto text-center">
+        <article
+          data-aos="fade-left"
+          class="Do col-12 col-md-5 mx-auto text-center"
+        >
           <p>Join our community on Discord</p>
           <a href="https://t.me/shop.oasis" target="_blank">
             https://t.me/shop.oasis</a
@@ -211,6 +229,41 @@
       </section>
     </section>
     <!--What can you do Ends -->
+
+    <!-- Email Subscription -->
+
+    <section
+      class="subscribe text-center flex-column justify-content-center align-items-center col-12"
+    >
+      <div
+        class="CloseIt d-flex align-items-center justify-content-center mb-5"
+      >
+        <i class="bi bi-x"> </i>
+      </div>
+
+      <div
+        class="d-flex flex-column justify-content-between align-items-center col-12 col-md-8"
+      >
+        <h2>Join our waitlist</h2>
+        <p>Get access to premium content</p>
+        <form
+          class="d-flex flex-row justify-content-between align-items-center col-12"
+        >
+          <div class="col-7">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col-4">
+            <button class="main-btn col-12" type="submit">Join</button>
+          </div>
+        </form>
+        <p class="mt-3">Be the first to experience this 🥰😊😊😍🥳</p>
+      </div>
+    </section>
 
     <!-- FOOTER START -->
     <footer class="container d-flex flex-column">
@@ -326,6 +379,11 @@
       // ScrollReveal().reveal(".social", { duration: 2000 });
       // ScrollReveal().reveal(".title", { interval: 3000 });
       // ScrollReveal().reveal(".intro", { interval: 3000 });
+      AOS.init();
+
+      const toggleBtn = document.querySelector("#join");
+      const Close = document.querySelector(".CloseIt");
+      const PopUp = document.querySelector(".subscribe");
 
       const NavMenuBar = document.querySelector("#menuBar");
       const MenuList = document.querySelector(".navBar");
@@ -333,6 +391,14 @@
       NavMenuBar.addEventListener("click", () => {
         NavMenuBar.classList.toggle("bi-x");
         MenuList.classList.toggle("active");
+      });
+
+      toggleBtn.addEventListener("click", () => {
+        PopUp.classList.toggle("popUp");
+      });
+
+      Close.addEventListener("click", () => {
+        PopUp.classList.toggle("popUp");
       });
     </script>
   </body>

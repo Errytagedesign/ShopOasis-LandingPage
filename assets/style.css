@@ -30,6 +30,7 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   background-color: #000;
+  position: relative;
 }
 
 a {
@@ -207,9 +208,12 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
+  .hero {
+    height: 80vh;
+  }
   .hero > section {
     width: 90%;
-    height: 50%;
+    height: 70%;
   }
   .hero section p {
     font-size: 1rem;
@@ -227,6 +231,12 @@ h2 {
 
 .about {
   margin: 7em auto;
+}
+
+@media screen and (max-width: 900px) {
+  .about aside {
+    margin-top: 8em;
+  }
 }
 
 .shopping {
@@ -315,8 +325,8 @@ h2 {
 
 .Do {
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0.469199px -0.469199px 0.469199px rgba(214, 214, 214, 0.4),
-    inset -0.469199px 0.469199px 0.469199px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0.5px -0.5px 0.5px rgba(214, 214, 214, 0.4),
+    inset -0.5px 0.5px 0.5px rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(4.62161px);
   padding: 2em;
   border-radius: 5.27848px;
@@ -406,4 +416,49 @@ footer article {
   footer small {
     font-size: 8px;
   }
+}
+
+form {
+  background: #fff;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+}
+
+input {
+  border: none !important;
+}
+
+.subscribe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: none;
+  background: rgba(43, 43, 43, 0.5);
+  backdrop-filter: blur(4.62161px);
+  padding: 2em;
+  border-radius: 5.27848px;
+}
+
+.CloseIt {
+  font-size: 3rem;
+  font-weight: 900;
+  background-color: red;
+  padding: 1em;
+  color: #fff;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .subscribe {
+    top: -500px;
+  }
+}
+
+.subscribe.popUp {
+  display: flex;
 }
